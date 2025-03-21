@@ -2,7 +2,6 @@
 
 char board[3][3];  // 3x3 Tic-Tac-Toe board
 
-// Function to initialize the board with numbers
 void initializeBoard() {
     char num = '1';
     for (int i = 0; i < 3; i++) {
@@ -36,7 +35,6 @@ int checkWin() {
             return 1; // Column win
     }
 
-    // Check diagonals
     if (board[0][0] == board[1][1] && board[1][1] == board[2][2])
         return 1; // Diagonal win
     if (board[0][2] == board[1][1] && board[1][1] == board[2][0])
@@ -54,7 +52,7 @@ int checkDraw() {
             }
         }
     }
-    return 1; // No empty spaces, it's a draw
+    return 1; 
 }
 
 // Function to take player input
